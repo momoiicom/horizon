@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -62,6 +62,10 @@
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
         "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
@@ -279,10 +283,22 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "custom_liquid_KQyW73": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "{% liquid\n  # Market variant auto-selection based on warehouse location\n  assign auto_market_variant = 'International'\n  \n  case localization.country.iso_code\n    when 'US'\n      assign auto_market_variant = 'United States'\n    when 'CN'\n      assign auto_market_variant = 'China'\n    when 'PH'\n      assign auto_market_variant = 'Philippines'\n    when 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'CH', 'NO', 'IS', 'LI', 'MC', 'AD', 'SM', 'VA'\n      assign auto_market_variant = 'Europe'\n    when 'JP', 'KR', 'SG', 'MY', 'TH', 'VN', 'ID', 'TW', 'HK', 'MO', 'IN', 'BD', 'PK', 'LK', 'NP', 'MM', 'KH', 'LA', 'BN', 'MN', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AU', 'NZ'\n      assign auto_market_variant = 'Asia'\n  endcase\n%}\n\n<script>\n  console.log(\"Market: {{ auto_market_variant }}\")\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_fa6P9H",
+    "custom_liquid_KQyW73"
   ]
 }
