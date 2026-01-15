@@ -1,0 +1,534 @@
+{%- comment -%}
+  CÓCOES Health Benefits Section
+  
+  Shows health benefits in a 2x2 grid: sodium comparison, glycemic index, allergens, and nutrients.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Health Benefits",
+  "tag": "section",
+  "class": "section-wrapper cocoes-health-benefits",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Health Benefits",
+      "category": "CÓCOES",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>For Your Health: Real Benefits</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "benefits_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 64,
+            "width": "fill"
+          },
+          "blocks": {
+            "left_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 64,
+                "width": "fill"
+              },
+              "blocks": {
+                "sodium_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Slash Sodium, Keep the Flavor</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>If you've ever checked the label on soy sauce, you know: it's a sodium overload.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "comparison_box": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 16,
+                        "width": "fill",
+                        "inherit_color_scheme": false,
+                        "color_scheme": "scheme-2",
+                        "border": "solid",
+                        "border_width": 1,
+                        "border_radius": 16,
+                        "padding-block-start": 24,
+                        "padding-block-end": 24,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {
+                        "soy_label": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Regular Soy Sauce</strong> — ~300mg</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "cocoes_label": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>CÓCOES Aminos</strong> — 90–130mg</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "savings": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Up to 75% less sodium per tsp</strong></p>",
+                            "type_preset": "rte",
+                            "alignment": "right"
+                          }
+                        }
+                      },
+                      "block_order": ["soy_label", "cocoes_label", "savings"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>High sodium intake is linked to high blood pressure and cardiovascular strain. Cutting back doesn't mean eating bland food—it just means choosing smarter ingredients.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "comparison_box", "conclusion"]
+                },
+                "glycemic_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Lower Glycemic Alternative</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>The glycemic index (GI) matters for avoiding energy crashes.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "comparison_list": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 12,
+                        "width": "fill",
+                        "border": "solid",
+                        "border_width": 1,
+                        "border_radius": 16,
+                        "padding-block-start": 24,
+                        "padding-block-end": 24,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {
+                        "sugar": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>White Sugar</strong> — GI 65+ (High)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "honey": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Honey & Maple</strong> — GI ~55 (Med)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "sap": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Coconut Flower Sap</strong> — GI ~35 (Low)</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["sugar", "honey", "sap"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Lower GI means sugars release slowly, giving steady energy instead of spikes. Ideally for those watching blood sugar.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "comparison_list", "conclusion"]
+                }
+              },
+              "block_order": ["sodium_card", "glycemic_card"]
+            },
+            "right_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 64,
+                "width": "fill"
+              },
+              "blocks": {
+                "allergens_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Free from Common Allergens</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Soy sauce contains soy and often wheat. CÓCOES is naturally free from:</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "badges": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "gap": 8,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "badge_1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Soy</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_2": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Gluten</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_3": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Dairy</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_4": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No MSG</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        }
+                      },
+                      "block_order": ["badge_1", "badge_2", "badge_3", "badge_4"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Just fermented coconut sap and sea salt. Safe for celiac, paleo, Whole30, or allergen-free diets. *(Contains Coconut)*</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "badges", "conclusion"]
+                },
+                "nutrients_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
+                    "border": "solid",
+                    "border_width": 1,
+                    "border_radius": 24,
+                    "padding-block-start": 32,
+                    "padding-block-end": 32,
+                    "padding-inline-start": 32,
+                    "padding-inline-end": 32
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Naturally Nutrient-Rich & Fermented</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Not fortified. Just nature.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "nutrients_list": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 8,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "item_1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Amino Acids</strong> (building blocks)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_2": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>B Vitamins</strong> (energy metabolism)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_3": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Minerals</strong> (K, Mg, Zn, Fe)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_4": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Prebiotic Inulin</strong> (gut health)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_5": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Living Enzymes</strong> (from fermentation)</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5"]
+                    },
+                    "note": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><em>If you eat yogurt or kimchi for gut health, our fermented vinegar fits right in.</em></p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "subtitle", "nutrients_list", "note"]
+                }
+              },
+              "block_order": ["allergens_card", "nutrients_card"]
+            }
+          },
+          "block_order": ["left_column", "right_column"]
+        }
+      },
+      "block_order": ["header", "benefits_grid"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    }
+  ]
+}
+{% endschema %}

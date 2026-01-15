@@ -1,0 +1,503 @@
+{%- comment -%}
+  CÓCOES Section: "Why It Matters for the Planet" - Sustainability
+  
+  This section explains the sustainability benefits of coconut sap harvesting.
+  Uses a two-column layout with text and visual elements.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Sustainability",
+  "tag": "section",
+  "class": "section-wrapper cocoes-sustainability",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "image"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "row"
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_on_mobile",
+      "label": "Vertical on mobile",
+      "default": true,
+      "visible_if": "{{ section.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        },
+        {
+          "value": "space-between",
+          "label": "Space between"
+        }
+      ],
+      "default": "space-between",
+      "visible_if": "{{ section.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center",
+      "visible_if": "{{ section.settings.content_direction == 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start",
+      "visible_if": "{{ section.settings.content_direction != 'row' }}"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center",
+      "visible_if": "{{ section.settings.content_direction == 'column' }}"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Sustainability",
+      "category": "CÓCOES",
+      "blocks": {
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Why It Matters for the Planet</h2>",
+                "type_preset": "h2"
+              }
+            },
+            "intro": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Harvesting coconut flower sap is one of the most sustainable food systems out there. Here's why:</p>",
+                "type_preset": "rte"
+              }
+            },
+            "benefits_list": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 20,
+                "width": "fill"
+              },
+              "blocks": {
+                "benefit_1": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>The tree keeps producing.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Unlike harvesting coconuts, tapping sap doesn't harm the tree. A single palm can produce sap—and coconuts—for 40 to 60 years.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                },
+                "benefit_2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>No cutting, no clearing.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>There's no need to clear land or replant annually. The trees grow naturally in biodiverse coastal farms, stabilizing soil and sequestering carbon.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                },
+                "benefit_3": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Zero waste.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>After we collect the sap, everything else—flower stems, husks, byproducts—gets composted and returned to the soil.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                }
+              },
+              "block_order": ["benefit_1", "benefit_2", "benefit_3"]
+            },
+            "quote": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>It's sustainable, nature-positive farming in action. The land gets healthier, the trees keep giving, and farming families earn stable incomes year after year.</em></p>",
+                "type_preset": "rte",
+                "padding-inline-start": 16
+              }
+            }
+          },
+          "block_order": ["heading", "intro", "benefits_list", "quote"]
+        },
+        "visual_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "height": "fill",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-3",
+            "border_radius": 100,
+            "padding-block-start": 48,
+            "padding-block-end": 48,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
+          "blocks": {
+            "icon": {
+              "type": "icon",
+              "settings": {
+                "icon": "leaf",
+                "width": 64
+              }
+            },
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>Sustainable<br>by Nature</h3>",
+                "type_preset": "h3",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["icon", "title"]
+        }
+      },
+      "block_order": ["content_group", "visual_group"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 48,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    }
+  ]
+}
+{% endschema %}

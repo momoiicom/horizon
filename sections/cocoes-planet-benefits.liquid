@@ -1,0 +1,301 @@
+{%- comment -%}
+  CÓCOES Planet/Sustainability Benefits Section
+  
+  Dark background section with 3 sustainability cards.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Planet Benefits",
+  "tag": "section",
+  "class": "section-wrapper cocoes-planet-benefits",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Planet Benefits",
+      "category": "CÓCOES",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>For the Planet: Sustainability That Works</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "cards_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "card_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>🌳</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Giving Back, Not Taking Away</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>When we tap the flower, the tree keeps growing and producing for <strong>40–60 years</strong>. Compare that to coconut water (harvesting nuts) or soy (annual replanting).</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            },
+            "card_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>🚜</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Zero Deforestation</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our farms are rain-fed, organic, and harvested by hand. No land-clearing. No heavy machinery tearing up soil. No monocropping.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            },
+            "card_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>♻️</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Circular & Zero-Waste</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sap byproducts are composted. Husks become mulch. Old trunks become biomass fuel. It's a closed-loop system.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            }
+          },
+          "block_order": ["card_1", "card_2", "card_3"]
+        }
+      },
+      "block_order": ["header", "cards_grid"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 96,
+        "padding-block-end": 100
+      }
+    }
+  ]
+}
+{% endschema %}

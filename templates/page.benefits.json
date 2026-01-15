@@ -1,0 +1,988 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "hero": {
+      "type": "cocoes-hero-benefits",
+      "blocks": {
+        "badge": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WHY CHOOSE US</p>",
+            "type_preset": "h6",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Benefits: What Makes<br>CÓCOES Different?</h1>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "h1"
+          }
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You Deserve Better Than \"Just Okay\" Ingredients</p>",
+            "type_preset": "rte",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["badge", "heading", "subtitle"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_height": "medium",
+        "toggle_overlay": true,
+        "overlay_color": "#00000066",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "intro": {
+      "type": "cocoes-intro-benefits",
+      "blocks": {
+        "text_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "paragraph_1": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Let's face it: most of us don't think twice about reaching for soy sauce or sugar. They're pantry staples. They work. Why question it?</p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            },
+            "paragraph_2": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Here's why: because there are better options now—and they don't ask you to sacrifice flavor or convenience.</p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            },
+            "highlight": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>CÓCOES products are made from organic coconut flower sap, and that one simple swap unlocks a whole range of benefits you won't find in conventional condiments and sweeteners.</em></p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            }
+          },
+          "block_order": ["paragraph_1", "paragraph_2", "highlight"]
+        }
+      },
+      "block_order": ["text_group"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "health": {
+      "type": "cocoes-health-benefits",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>For Your Health: Real Benefits</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "benefits_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 64,
+            "width": "fill"
+          },
+          "blocks": {
+            "left_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 64,
+                "width": "fill"
+              },
+              "blocks": {
+                "sodium_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Slash Sodium, Keep the Flavor</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>If you've ever checked the label on soy sauce, you know: it's a sodium overload.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "comparison_box": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 16,
+                        "width": "fill",
+                        "inherit_color_scheme": false,
+                        "color_scheme": "scheme-2",
+                        "border": "solid",
+                        "border_width": 1,
+                        "border_radius": 16,
+                        "padding-block-start": 24,
+                        "padding-block-end": 24,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {
+                        "soy_label": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Regular Soy Sauce</strong> — ~300mg</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "cocoes_label": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>CÓCOES Aminos</strong> — 90–130mg</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "savings": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Up to 75% less sodium per tsp</strong></p>",
+                            "type_preset": "rte",
+                            "alignment": "right"
+                          }
+                        }
+                      },
+                      "block_order": ["soy_label", "cocoes_label", "savings"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>High sodium intake is linked to high blood pressure and cardiovascular strain. Cutting back doesn't mean eating bland food—it just means choosing smarter ingredients.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "comparison_box", "conclusion"]
+                },
+                "glycemic_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Lower Glycemic Alternative</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>The glycemic index (GI) matters for avoiding energy crashes.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "comparison_list": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 12,
+                        "width": "fill",
+                        "border": "solid",
+                        "border_width": 1,
+                        "border_radius": 16,
+                        "padding-block-start": 24,
+                        "padding-block-end": 24,
+                        "padding-inline-start": 24,
+                        "padding-inline-end": 24
+                      },
+                      "blocks": {
+                        "sugar": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>White Sugar</strong> — GI 65+ (High)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "honey": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Honey & Maple</strong> — GI ~55 (Med)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "sap": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Coconut Flower Sap</strong> — GI ~35 (Low)</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["sugar", "honey", "sap"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Lower GI means sugars release slowly, giving steady energy instead of spikes. Ideally for those watching blood sugar.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "comparison_list", "conclusion"]
+                }
+              },
+              "block_order": ["sodium_card", "glycemic_card"]
+            },
+            "right_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 64,
+                "width": "fill"
+              },
+              "blocks": {
+                "allergens_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Free from Common Allergens</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "intro": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Soy sauce contains soy and often wheat. CÓCOES is naturally free from:</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "badges": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "row",
+                        "vertical_on_mobile": true,
+                        "horizontal_alignment": "flex-start",
+                        "gap": 8,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "badge_1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Soy</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_2": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Gluten</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_3": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No Dairy</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        },
+                        "badge_4": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>No MSG</p>",
+                            "type_preset": "h6",
+                            "background": true,
+                            "corner_radius": 20,
+                            "padding-block-start": 4,
+                            "padding-block-end": 4,
+                            "padding-inline-start": 12,
+                            "padding-inline-end": 12
+                          }
+                        }
+                      },
+                      "block_order": ["badge_1", "badge_2", "badge_3", "badge_4"]
+                    },
+                    "conclusion": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Just fermented coconut sap and sea salt. Safe for celiac, paleo, Whole30, or allergen-free diets. *(Contains Coconut)*</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "intro", "badges", "conclusion"]
+                },
+                "nutrients_card": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 16,
+                    "width": "fill",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
+                    "border": "solid",
+                    "border_width": 1,
+                    "border_radius": 24,
+                    "padding-block-start": 32,
+                    "padding-block-end": 32,
+                    "padding-inline-start": 32,
+                    "padding-inline-end": 32
+                  },
+                  "blocks": {
+                    "title": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<h3>Naturally Nutrient-Rich & Fermented</h3>",
+                        "type_preset": "h3"
+                      }
+                    },
+                    "subtitle": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Not fortified. Just nature.</p>",
+                        "type_preset": "rte"
+                      }
+                    },
+                    "nutrients_list": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 8,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "item_1": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Amino Acids</strong> (building blocks)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_2": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>B Vitamins</strong> (energy metabolism)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_3": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Minerals</strong> (K, Mg, Zn, Fe)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_4": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Prebiotic Inulin</strong> (gut health)</p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "item_5": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>✓ <strong>Living Enzymes</strong> (from fermentation)</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["item_1", "item_2", "item_3", "item_4", "item_5"]
+                    },
+                    "note": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><em>If you eat yogurt or kimchi for gut health, our fermented vinegar fits right in.</em></p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["title", "subtitle", "nutrients_list", "note"]
+                }
+              },
+              "block_order": ["allergens_card", "nutrients_card"]
+            }
+          },
+          "block_order": ["left_column", "right_column"]
+        }
+      },
+      "block_order": ["header", "benefits_grid"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "planet": {
+      "type": "cocoes-planet-benefits",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>For the Planet: Sustainability That Works</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "cards_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "card_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>🌳</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Giving Back, Not Taking Away</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>When we tap the flower, the tree keeps growing and producing for <strong>40–60 years</strong>. Compare that to coconut water (harvesting nuts) or soy (annual replanting).</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            },
+            "card_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>🚜</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Zero Deforestation</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Our farms are rain-fed, organic, and harvested by hand. No land-clearing. No heavy machinery tearing up soil. No monocropping.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            },
+            "card_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_radius": 16,
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
+              },
+              "blocks": {
+                "emoji": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>♻️</p>",
+                    "type_preset": "h1"
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Circular & Zero-Waste</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sap byproducts are composted. Husks become mulch. Old trunks become biomass fuel. It's a closed-loop system.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["emoji", "title", "description"]
+            }
+          },
+          "block_order": ["card_1", "card_2", "card_3"]
+        }
+      },
+      "block_order": ["header", "cards_grid"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 96,
+        "padding-block-end": 100
+      }
+    },
+    "community": {
+      "type": "cocoes-community-benefits",
+      "blocks": {
+        "visual_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "height": "fit",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-2",
+            "border_radius": 100,
+            "padding-block-start": 48,
+            "padding-block-end": 48,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
+          "blocks": {
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>Real People,<br>Real Impact</h3>",
+                "type_preset": "h3",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["title"]
+        },
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>For Communities</h2>",
+                "type_preset": "h2"
+              }
+            },
+            "benefit_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Fair Wages & Long-Term Livelihoods</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sap tapping is a skilled trade. Our tappers earn stable, year-round incomes with benefits like healthcare and housing. Many are Indigenous Palaw'an people working with dignity on their ancestral lands.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            },
+            "benefit_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Championing Women</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A significant portion of our workforce—in fermentation, QC, and packaging—is women. We honor land rights, culture, and knowledge, supporting entire families.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            }
+          },
+          "block_order": ["heading", "benefit_1", "benefit_2"]
+        }
+      },
+      "block_order": ["visual_group", "content_group"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 64,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    },
+    "summary": {
+      "type": "cocoes-summary-benefits",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>The Bottom Line: Why CÓCOES Is Different</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "checklist_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 48,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "left_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "item_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Lower sodium (up to 75% less)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Low glycemic sweeteners (GI ~35)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Soy, gluten, & dairy free</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Naturally nutrient-rich</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["item_1", "item_2", "item_3", "item_4"]
+            },
+            "right_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "item_5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Fermented for flavor</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Sustainably harvested</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Supports Filipino communities</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Organic certified</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["item_5", "item_6", "item_7", "item_8"]
+            }
+          },
+          "block_order": ["left_column", "right_column"]
+        },
+        "reality_check": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 8,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill",
+            "border": "solid",
+            "border_width": 0,
+            "border_radius": 16,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 32,
+            "padding-inline-end": 32
+          },
+          "blocks": {
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h4>A Quick Reality Check</h4>",
+                "type_preset": "h4"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>We're not saying this will cure diseases or solve all problems. But it <strong>is</strong> a cleaner, lower-sodium, nutrient-rich alternative made in a way that supports the planet. That's not magic. It's just better food.</em></p>",
+                "type_preset": "rte"
+              }
+            }
+          },
+          "block_order": ["title", "text"]
+        }
+      },
+      "block_order": ["header", "checklist_grid", "reality_check"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    },
+    "footer": {
+      "type": "cocoes-footer-benefits",
+      "blocks": {
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Ready to Start Cooking?</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>You don't have to choose between what's good for you and what tastes good. With CÓCOES, you get both.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "cta_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "next_label": {
+              "type": "text",
+              "settings": {
+                "text": "<p>NEXT UP</p>",
+                "type_preset": "h6",
+                "alignment": "center"
+              }
+            },
+            "cta_button": {
+              "type": "button",
+              "settings": {
+                "label": "Flavor Profiles & How to Use →",
+                "link": "shopify://pages/flavor-and-how-to-use",
+                "style_class": "button"
+              }
+            }
+          },
+          "block_order": ["next_label", "cta_button"]
+        }
+      },
+      "block_order": ["content_group", "cta_group"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero",
+    "intro",
+    "health",
+    "planet",
+    "community",
+    "summary",
+    "footer"
+  ]
+}

@@ -1,0 +1,290 @@
+{%- comment -%}
+  CÓCOES Community Benefits Section
+  
+  Two-column layout with visual element and community benefits text.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Community Benefits",
+  "tag": "section",
+  "class": "section-wrapper cocoes-community-benefits",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "image"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "row"
+    },
+    {
+      "type": "checkbox",
+      "id": "vertical_on_mobile",
+      "label": "Vertical on mobile",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "Horizontal alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        },
+        {
+          "value": "space-between",
+          "label": "Space between"
+        }
+      ],
+      "default": "space-between"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Community Benefits",
+      "category": "CÓCOES",
+      "blocks": {
+        "visual_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "height": "fit",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-2",
+            "border_radius": 100,
+            "padding-block-start": 48,
+            "padding-block-end": 48,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
+          "blocks": {
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>Real People,<br>Real Impact</h3>",
+                "type_preset": "h3",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["title"]
+        },
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>For Communities</h2>",
+                "type_preset": "h2"
+              }
+            },
+            "benefit_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Fair Wages & Long-Term Livelihoods</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Sap tapping is a skilled trade. Our tappers earn stable, year-round incomes with benefits like healthcare and housing. Many are Indigenous Palaw'an people working with dignity on their ancestral lands.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            },
+            "benefit_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 8,
+                "width": "fill"
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Championing Women</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A significant portion of our workforce—in fermentation, QC, and packaging—is women. We honor land rights, culture, and knowledge, supporting entire families.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            }
+          },
+          "block_order": ["heading", "benefit_1", "benefit_2"]
+        }
+      },
+      "block_order": ["visual_group", "content_group"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 64,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,454 @@
+{%- comment -%}
+  CÓCOES Section: "What Makes It Special?" - Nutrients
+  
+  This section showcases the nutrients in coconut flower sap.
+  Uses a 3-column layout with icon groups for each nutrient category.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Nutrients",
+  "tag": "section",
+  "class": "section-wrapper cocoes-nutrients",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Nutrients",
+      "category": "CÓCOES",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>What Makes It Special?</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Think of coconut flower sap as one of nature's most nutrient-dense sweeteners. Here's what nature packs inside:</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "nutrients_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "amino_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "fire",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Amino Acids</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Contains <strong>17 amino acids</strong>, including glutamic acid which creates that savory natural umami flavor found in our aminos.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "vitamins_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lightning_bolt",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Vitamins</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Packed with essential <strong>B vitamins</strong> (B1, B2, B3, B6) and Vitamin C to support natural energy metabolism and immunity.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "minerals_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "star",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Minerals</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A powerhouse of electrolytes: rich in <strong>Potassium, Magnesium, Zinc, and Iron</strong> for hydration and daily vitality.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "gut_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "heart",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Gut Health</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Loaded with <strong>Prebiotic Inulin</strong> to feed beneficial gut bacteria, plus living natural enzymes that aid in digestion.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            }
+          },
+          "block_order": ["amino_card", "vitamins_card", "minerals_card", "gut_card"]
+        },
+        "footer_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All of this happens naturally—no fortification, no added nutrients. Nature does the heavy lifting.</p>",
+            "type_preset": "rte",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["header_group", "nutrients_row", "footer_text"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  ]
+}
+{% endschema %}

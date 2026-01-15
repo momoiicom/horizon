@@ -1,0 +1,298 @@
+{%- comment -%}
+  CÓCOES Summary/Checklist Benefits Section
+  
+  Checklist grid with bottom line message.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Summary Benefits",
+  "tag": "section",
+  "class": "section-wrapper cocoes-summary-benefits",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Summary Benefits",
+      "category": "CÓCOES",
+      "blocks": {
+        "header": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>The Bottom Line: Why CÓCOES Is Different</h2>",
+            "type_preset": "h2",
+            "width": "100%",
+            "alignment": "center"
+          }
+        },
+        "checklist_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 48,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "left_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "item_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Lower sodium (up to 75% less)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Low glycemic sweeteners (GI ~35)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Soy, gluten, & dairy free</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_4": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Naturally nutrient-rich</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["item_1", "item_2", "item_3", "item_4"]
+            },
+            "right_column": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "item_5": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Fermented for flavor</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_6": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Sustainably harvested</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_7": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Supports Filipino communities</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "item_8": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>✅ Organic certified</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["item_5", "item_6", "item_7", "item_8"]
+            }
+          },
+          "block_order": ["left_column", "right_column"]
+        },
+        "reality_check": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "gap": 8,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill",
+            "border": "solid",
+            "border_width": 0,
+            "border_radius": 16,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 32,
+            "padding-inline-end": 32
+          },
+          "blocks": {
+            "title": {
+              "type": "text",
+              "settings": {
+                "text": "<h4>A Quick Reality Check</h4>",
+                "type_preset": "h4"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>We're not saying this will cure diseases or solve all problems. But it <strong>is</strong> a cleaner, lower-sodium, nutrient-rich alternative made in a way that supports the planet. That's not magic. It's just better food.</em></p>",
+                "type_preset": "rte"
+              }
+            }
+          },
+          "block_order": ["title", "text"]
+        }
+      },
+      "block_order": ["header", "checklist_grid", "reality_check"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  ]
+}
+{% endschema %}

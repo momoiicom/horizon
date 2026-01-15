@@ -1,0 +1,499 @@
+{%- comment -%}
+  CÓCOES Section: "From Sap to Pantry Staples" - Products
+  
+  This section showcases the product range made from coconut sap.
+  Uses a grid of product cards with links to shop.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Products Flow",
+  "tag": "section",
+  "class": "section-wrapper cocoes-products",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "image"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Products Flow",
+      "category": "CÓCOES",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>From Sap to Pantry Staples</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At CÓCOES, we take this incredible raw ingredient and transform it—gently—into products you can actually use every day.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "products_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "aminos_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ferment It</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Aminos</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Naturally fermented with sea salt to create a savory, umami-rich sauce with <strong>70% less sodium</strong> than soy sauce. It's the perfect soy-free, gluten-free alternative for marinades, dips, and stir-fries.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            },
+            "vinegar_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Age It Naturally</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Vinegar</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A raw, <strong>unfiltered</strong> vinegar containing the \"mother\"—a culture of beneficial probiotics and enzymes. It offers a smoother, mineral-rich acidity that's gentler on the palate than apple cider vinegar.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            }
+          },
+          "block_order": ["aminos_card", "vinegar_card"]
+        },
+        "products_grid_2": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "syrup_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Slow-Cook It</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Flower Syrup</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Gently evaporated into a rich golden nectar. This <strong>one-ingredient</strong> sweetener has a <strong>low Glycemic Index of 35</strong> and is packed with potassium and zinc—pouring like maple syrup, but better for your body.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            },
+            "teriyaki_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Add Spices</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Teriyaki</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A thick, sticky glaze made without refined sugar or gums. We blend our savory Aminos with <strong>fresh ginger, garlic, and spices</strong> for authentic teriyaki flavor that's completely soy-free and gluten-free.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            }
+          },
+          "block_order": ["syrup_card", "teriyaki_card"]
+        },
+        "footer_text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every product starts with the same pure sap, tapped fresh each morning in Palawan, Philippines.</p>",
+            "type_preset": "rte",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["header_group", "products_grid", "products_grid_2", "footer_text"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,349 @@
+{%- comment -%}
+  CÓCOES Section: "Coconut Sap vs. Coconut Water: The Big Difference"
+  
+  This section uses the theme's section pattern with two comparison cards.
+  Uses groups with icons to create the comparison layout.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Sap vs Water",
+  "tag": "section",
+  "class": "section-wrapper cocoes-comparison",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Sap vs Water",
+      "category": "CÓCOES",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Coconut Sap vs. Coconut Water: The Big Difference</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>It's a common question, but the answer is no—they're completely different:</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "cards_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "water_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-3",
+                "border": "solid",
+                "border_width": 2,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>🥥 Coconut Water</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Comes from inside mature coconuts. You crack one open, and there it is—refreshing and hydrating, but mostly water with some electrolytes.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            },
+            "sap_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-2",
+                "border": "solid",
+                "border_width": 2,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>🍯 Coconut Flower Sap</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Drips directly from the living flower stem before any fruit forms. It never touches a coconut. Instead, it's tapped fresh from the tree, similar to how maple syrup is tapped—except it comes from tropical palm blossoms instead of tree bark.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            }
+          },
+          "block_order": ["water_card", "sap_card"]
+        },
+        "conclusion": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>The result? A liquid that's naturally sweeter, more mineral-rich, and far more versatile than coconut water could ever be.</em></p>",
+            "type_preset": "h5",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["header_group", "cards_row", "conclusion"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    }
+  ]
+}
+{% endschema %}

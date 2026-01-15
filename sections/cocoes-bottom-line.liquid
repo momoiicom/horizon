@@ -1,0 +1,288 @@
+{%- comment -%}
+  CÓCOES Section: "The Bottom Line" - CTA Footer
+  
+  This section provides a summary and call-to-action.
+  Uses centered text with a prominent button.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Bottom Line CTA",
+  "tag": "section",
+  "class": "section-wrapper cocoes-bottom-line",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Bottom Line CTA",
+      "category": "CÓCOES",
+      "blocks": {
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>The Bottom Line</h2>",
+                "type_preset": "h3",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "summary": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Coconut flower sap is a naturally sweet, nutrient-dense liquid tapped from coconut blossoms. It's low-GI, mineral-rich, and incredibly versatile. And when you choose products made from it, you're supporting one of the most sustainable, community-friendly food systems in the world.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "summary"]
+        },
+        "cta_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 20,
+            "padding-block-start": 32
+          },
+          "blocks": {
+            "next_label": {
+              "type": "text",
+              "settings": {
+                "text": "<p>NEXT UP</p>",
+                "type_preset": "h6",
+                "alignment": "center"
+              }
+            },
+            "cta_button": {
+              "type": "button",
+              "settings": {
+                "label": "How Is It Made? From Farm to You →",
+                "link": "shopify://pages/how-its-made",
+                "style_class": "button"
+              }
+            }
+          },
+          "block_order": ["next_label", "cta_button"]
+        }
+      },
+      "block_order": ["content_group", "cta_group"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  ]
+}
+{% endschema %}

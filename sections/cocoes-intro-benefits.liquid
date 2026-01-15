@@ -1,0 +1,192 @@
+{%- comment -%}
+  CÓCOES Intro Section: Benefits Page Introduction
+  
+  Centered text introduction explaining why CÓCOES is different.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Intro - Benefits",
+  "tag": "section",
+  "class": "section-wrapper cocoes-intro-benefits",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 96
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Intro - Benefits",
+      "category": "CÓCOES",
+      "blocks": {
+        "text_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "paragraph_1": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Let's face it: most of us don't think twice about reaching for soy sauce or sugar. They're pantry staples. They work. Why question it?</p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            },
+            "paragraph_2": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Here's why: because there are better options now—and they don't ask you to sacrifice flavor or convenience.</p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            },
+            "highlight": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>CÓCOES products are made from organic coconut flower sap, and that one simple swap unlocks a whole range of benefits you won't find in conventional condiments and sweeteners.</em></p>",
+                "type_preset": "rte",
+                "width": "100%"
+              }
+            }
+          },
+          "block_order": ["paragraph_1", "paragraph_2", "highlight"]
+        }
+      },
+      "block_order": ["text_group"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "padding-block-start": 96,
+        "padding-block-end": 96
+      }
+    }
+  ]
+}
+{% endschema %}

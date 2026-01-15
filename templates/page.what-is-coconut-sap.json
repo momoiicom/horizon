@@ -1,0 +1,1271 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "cocoes-hero-what-is-sap",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>What Is Coconut Flower Sap?</h1>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "h1"
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "size": "pixel",
+            "pixel_size": 8
+          }
+        }
+      },
+      "block_order": ["heading", "spacer"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_height": "medium",
+        "toggle_overlay": true,
+        "overlay_color": "#00000066",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "sweet_secret": {
+      "type": "cocoes-sweet-secret",
+      "blocks": {
+        "text_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "fill",
+            "height": "fit"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>The Sweet Secret Hidden in Coconut Blossoms</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "max_width": "normal"
+              }
+            },
+            "text_1": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Long before a coconut tree produces the fruit we all know, it grows delicate flower buds high in its canopy.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "normal"
+              }
+            },
+            "text_2": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Inside those unopened blossoms flows a nutrient-rich, naturally sweet liquid called <strong>coconut flower sap</strong>—and it's the heart of everything we make at CÓCOES.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "normal"
+              }
+            }
+          },
+          "block_order": ["heading", "text_1", "text_2"]
+        },
+        "visual_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "height": "fit",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-2",
+            "border_radius": 24,
+            "padding-block-start": 32,
+            "padding-block-end": 32,
+            "padding-inline-start": 32,
+            "padding-inline-end": 32
+          },
+          "blocks": {
+            "image": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "landscape",
+                "width": "fill"
+              }
+            },
+            "caption": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>Pure sap dripping from the blossom</em></p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["image", "caption"]
+        }
+      },
+      "block_order": ["text_group", "visual_group"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 48,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "sap_vs_water": {
+      "type": "cocoes-sap-vs-water",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Coconut Sap vs. Coconut Water: The Big Difference</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>It's a common question, but the answer is no—they're completely different:</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "cards_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "water_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-3",
+                "border": "solid",
+                "border_width": 2,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>🥥 Coconut Water</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Comes from inside mature coconuts. You crack one open, and there it is—refreshing and hydrating, but mostly water with some electrolytes.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            },
+            "sap_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-2",
+                "border": "solid",
+                "border_width": 2,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>🍯 Coconut Flower Sap</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Drips directly from the living flower stem before any fruit forms. It never touches a coconut. Instead, it's tapped fresh from the tree, similar to how maple syrup is tapped—except it comes from tropical palm blossoms instead of tree bark.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["title", "description"]
+            }
+          },
+          "block_order": ["water_card", "sap_card"]
+        },
+        "conclusion": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>The result? A liquid that's naturally sweeter, more mineral-rich, and far more versatile than coconut water could ever be.</em></p>",
+            "type_preset": "h5",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["header_group", "cards_row", "conclusion"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "nutrients": {
+      "type": "cocoes-nutrients",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>What Makes It Special?</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Think of coconut flower sap as one of nature's most nutrient-dense sweeteners. Here's what nature packs inside:</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "nutrients_row": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 32,
+            "width": "fill"
+          },
+          "blocks": {
+            "amino_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "fire",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Amino Acids</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Contains <strong>17 amino acids</strong>, including glutamic acid which creates that savory natural umami flavor found in our aminos.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "vitamins_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "lightning_bolt",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Vitamins</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Packed with essential <strong>B vitamins</strong> (B1, B2, B3, B6) and Vitamin C to support natural energy metabolism and immunity.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "minerals_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "star",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Minerals</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A powerhouse of electrolytes: rich in <strong>Potassium, Magnesium, Zinc, and Iron</strong> for hydration and daily vitality.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            },
+            "gut_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 30,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
+              },
+              "blocks": {
+                "icon": {
+                  "type": "icon",
+                  "settings": {
+                    "icon": "heart",
+                    "width": 40
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Gut-Friendly Fiber</h3>",
+                    "type_preset": "h4",
+                    "alignment": "center"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Contains <strong>inulin</strong>, a prebiotic fiber that supports healthy digestion and feeds beneficial gut bacteria.</p>",
+                    "type_preset": "rte",
+                    "alignment": "center"
+                  }
+                }
+              },
+              "block_order": ["icon", "title", "description"]
+            }
+          },
+          "block_order": ["amino_card", "vitamins_card", "minerals_card", "gut_card"]
+        }
+      },
+      "block_order": ["header_group", "nutrients_row"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "glycemic_index": {
+      "type": "cocoes-glycemic-index",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Steady Energy, No Sugar Crash</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Here's where it gets interesting for anyone mindful of their sugar intake.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "content_card": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "custom",
+            "custom_width": 80,
+            "width_mobile": "fill",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-3",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 20,
+            "border_radius": 24,
+            "padding-block-start": 40,
+            "padding-block-end": 40,
+            "padding-inline-start": 40,
+            "padding-inline-end": 40
+          },
+          "blocks": {
+            "explanation": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "text_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Most sweeteners—like white sugar (GI 65+), honey (GI 58), or maple syrup (GI 54)—cause rapid blood sugar spikes.</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "text_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Coconut flower sap is different. With a <strong>Low Glycemic Index of ~35</strong>, it releases energy slowly.</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "callout": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 8,
+                    "width": "fill",
+                    "border": "solid",
+                    "border_width": 0,
+                    "border_radius": 12,
+                    "padding-block-start": 16,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 16,
+                    "padding-inline-end": 16
+                  },
+                  "blocks": {
+                    "callout_text": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>Why?</strong> The natural sugars are bound with minerals and amino acids, which slows down absorption into your bloodstream. The result is steady, sustained energy without the crash.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["callout_text"]
+                }
+              },
+              "block_order": ["text_1", "text_2", "callout"]
+            },
+            "comparison_group": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "comparison_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Sweetener Glycemic Comparison</h4>",
+                    "type_preset": "h5",
+                    "alignment": "center"
+                  }
+                },
+                "sugar_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>White Sugar</strong> — GI 65+ (High)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "honey_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Honey</strong> — GI 58 (Medium-High)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "maple_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Maple Syrup</strong> — GI 54 (Medium)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "sap_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>⭐ Coconut Flower Sap</strong> — GI 35 (Low) — <em>Lowest Impact</em></p>",
+                    "type_preset": "h6"
+                  }
+                }
+              },
+              "block_order": ["comparison_title", "sugar_row", "honey_row", "maple_row", "sap_row"]
+            }
+          },
+          "block_order": ["explanation", "comparison_group"]
+        }
+      },
+      "block_order": ["header_group", "content_card"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "products_flow": {
+      "type": "cocoes-products-flow",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>From Sap to Pantry Staples</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At CÓCOES, we take this incredible raw ingredient and transform it—gently—into products you can actually use every day.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "products_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "aminos_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Ferment It</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Aminos</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Naturally fermented with sea salt to create a savory, umami-rich sauce with <strong>70% less sodium</strong> than soy sauce. It's the perfect soy-free, gluten-free alternative for marinades, dips, and stir-fries.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            },
+            "vinegar_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Age It Naturally</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Vinegar</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>A raw, <strong>unfiltered</strong> vinegar containing the \"mother\"—a culture of beneficial probiotics and enzymes. It offers a smoother, mineral-rich acidity that's gentler on the palate than apple cider vinegar.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            }
+          },
+          "block_order": ["aminos_card", "vinegar_card"]
+        },
+        "products_grid_2": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "syrup_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Slow-Cook It</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Syrup</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Gently reduced into a rich, caramel-like syrup with deep, complex sweetness. Perfect for pancakes, desserts, or as a natural sweetener in beverages.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            },
+            "sugar_card": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 12,
+                "width": "fill",
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 20,
+                "border_radius": 16,
+                "padding-block-start": 24,
+                "padding-block-end": 24,
+                "padding-inline-start": 24,
+                "padding-inline-end": 24,
+                "link": "shopify://collections/all"
+              },
+              "blocks": {
+                "badge": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Crystallize It</p>",
+                    "type_preset": "h6",
+                    "background": true,
+                    "background_color": "#00000010",
+                    "corner_radius": 20,
+                    "padding-block-start": 4,
+                    "padding-block-end": 4,
+                    "padding-inline-start": 12,
+                    "padding-inline-end": 12
+                  }
+                },
+                "title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Coconut Sugar</h3>",
+                    "type_preset": "h4"
+                  }
+                },
+                "description": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Evaporated and crystallized into granules that work as a 1:1 replacement for cane sugar—with a lower glycemic index and richer mineral profile.</p>",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": ["badge", "title", "description"]
+            }
+          },
+          "block_order": ["syrup_card", "sugar_card"]
+        }
+      },
+      "block_order": ["header_group", "products_grid", "products_grid_2"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "color_scheme": "scheme-3",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "sustainability": {
+      "type": "cocoes-sustainability",
+      "blocks": {
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "gap": 24,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Why It Matters for the Planet</h2>",
+                "type_preset": "h2"
+              }
+            },
+            "intro": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Harvesting coconut flower sap is one of the most sustainable food systems out there. Here's why:</p>",
+                "type_preset": "rte"
+              }
+            },
+            "benefits_list": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "gap": 20,
+                "width": "fill"
+              },
+              "blocks": {
+                "benefit_1": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>The tree keeps producing.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Unlike harvesting coconuts, tapping sap doesn't harm the tree. A single palm can produce sap—and coconuts—for 40 to 60 years.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                },
+                "benefit_2": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>No cutting, no clearing.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>There's no need to clear land or replant annually. The trees grow naturally in biodiverse coastal farms, stabilizing soil and sequestering carbon.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                },
+                "benefit_3": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "flex-start",
+                    "gap": 16,
+                    "width": "fill"
+                  },
+                  "blocks": {
+                    "icon": {
+                      "type": "icon",
+                      "settings": {
+                        "icon": "check_box",
+                        "width": 24
+                      }
+                    },
+                    "text_group": {
+                      "type": "group",
+                      "settings": {
+                        "content_direction": "column",
+                        "gap": 4,
+                        "width": "fill"
+                      },
+                      "blocks": {
+                        "title": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p><strong>Zero waste.</strong></p>",
+                            "type_preset": "rte"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>After we collect the sap, everything else—flower stems, husks, byproducts—gets composted and returned to the soil.</p>",
+                            "type_preset": "rte"
+                          }
+                        }
+                      },
+                      "block_order": ["title", "description"]
+                    }
+                  },
+                  "block_order": ["icon", "text_group"]
+                }
+              },
+              "block_order": ["benefit_1", "benefit_2", "benefit_3"]
+            },
+            "quote": {
+              "type": "text",
+              "settings": {
+                "text": "<p><em>It's sustainable, nature-positive farming in action. The land gets healthier, the trees keep giving, and farming families earn stable incomes year after year.</em></p>",
+                "type_preset": "rte",
+                "padding-inline-start": 16
+              }
+            }
+          },
+          "block_order": ["heading", "intro", "benefits_list", "quote"]
+        },
+        "visual_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "height": "fill",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-3",
+            "border_radius": 100,
+            "padding-block-start": 60,
+            "padding-block-end": 60,
+            "padding-inline-start": 60,
+            "padding-inline-end": 60
+          },
+          "blocks": {
+            "stat_1": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>40-60</h2>",
+                "type_preset": "h1",
+                "alignment": "center"
+              }
+            },
+            "stat_label": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Years of Production<br>Per Tree</p>",
+                "type_preset": "rte",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["stat_1", "stat_label"]
+        }
+      },
+      "block_order": ["content_group", "visual_group"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "gap": 48,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "bottom_line": {
+      "type": "cocoes-bottom-line",
+      "blocks": {
+        "content_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 70,
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>The Bottom Line</h2>",
+                "type_preset": "h3",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "summary": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Coconut flower sap is a naturally sweet, nutrient-dense liquid tapped from coconut blossoms. It's low-GI, mineral-rich, and incredibly versatile. And when you choose products made from it, you're supporting one of the most sustainable, community-friendly food systems in the world.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "summary"]
+        },
+        "cta_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 20,
+            "padding-block-start": 32
+          },
+          "blocks": {
+            "next_label": {
+              "type": "text",
+              "settings": {
+                "text": "<p>NEXT UP</p>",
+                "type_preset": "h6",
+                "alignment": "center"
+              }
+            },
+            "cta_button": {
+              "type": "button",
+              "settings": {
+                "label": "How Is It Made? From Farm to You →",
+                "link": "shopify://pages/how-its-made",
+                "style_class": "button"
+              }
+            }
+          },
+          "block_order": ["next_label", "cta_button"]
+        }
+      },
+      "block_order": ["content_group", "cta_group"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 40,
+        "color_scheme": "scheme-2",
+        "padding-block-start": 80,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "sweet_secret",
+    "sap_vs_water",
+    "nutrients",
+    "glycemic_index",
+    "products_flow",
+    "sustainability",
+    "bottom_line"
+  ]
+}

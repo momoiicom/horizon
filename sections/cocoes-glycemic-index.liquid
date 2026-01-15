@@ -1,0 +1,377 @@
+{%- comment -%}
+  CÓCOES Section: "Steady Energy, No Sugar Crash" - Glycemic Index
+  
+  This section explains the low glycemic index benefit.
+  Uses text and visual comparison elements.
+{%- endcomment -%}
+
+{% capture children %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+{% render 'section', section: section, children: children %}
+
+{% schema %}
+{
+  "name": "CÓCOES Glycemic Index",
+  "tag": "section",
+  "class": "section-wrapper cocoes-glycemic",
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "group"
+    },
+    {
+      "type": "icon"
+    },
+    {
+      "type": "spacer"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment_flex_direction_column",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment_flex_direction_column",
+      "label": "Position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "Page"
+        },
+        {
+          "value": "full-width",
+          "label": "Full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "select",
+      "id": "background_media",
+      "label": "Background media",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.background_media == 'image' }}"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CÓCOES Glycemic Index",
+      "category": "CÓCOES",
+      "blocks": {
+        "header_group": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Steady Energy, No Sugar Crash</h2>",
+                "type_preset": "h2",
+                "width": "100%",
+                "alignment": "center"
+              }
+            },
+            "subtext": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Here's where it gets interesting for anyone mindful of their sugar intake.</p>",
+                "type_preset": "rte",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": ["heading", "subtext"]
+        },
+        "content_card": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "center",
+            "gap": 32,
+            "width": "custom",
+            "custom_width": 80,
+            "width_mobile": "fill",
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-3",
+            "border": "solid",
+            "border_width": 1,
+            "border_opacity": 20,
+            "border_radius": 24,
+            "padding-block-start": 40,
+            "padding-block-end": 40,
+            "padding-inline-start": 40,
+            "padding-inline-end": 40
+          },
+          "blocks": {
+            "explanation": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "text_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Most sweeteners—like white sugar (GI 65+), honey (GI 58), or maple syrup (GI 54)—cause rapid blood sugar spikes.</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "text_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Coconut flower sap is different. With a <strong>Low Glycemic Index of ~35</strong>, it releases energy slowly.</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "callout": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "column",
+                    "gap": 8,
+                    "width": "fill",
+                    "border": "solid",
+                    "border_width": 0,
+                    "border_radius": 12,
+                    "padding-block-start": 16,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 16,
+                    "padding-inline-end": 16
+                  },
+                  "blocks": {
+                    "callout_text": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p><strong>Why?</strong> The natural sugars are bound with minerals and amino acids, which slows down absorption into your bloodstream. The result is steady, sustained energy without the crash.</p>",
+                        "type_preset": "rte"
+                      }
+                    }
+                  },
+                  "block_order": ["callout_text"]
+                }
+              },
+              "block_order": ["text_1", "text_2", "callout"]
+            },
+            "comparison_group": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "center",
+                "gap": 16,
+                "width": "fill"
+              },
+              "blocks": {
+                "comparison_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h4>Sweetener Glycemic Comparison</h4>",
+                    "type_preset": "h5",
+                    "alignment": "center"
+                  }
+                },
+                "sugar_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>White Sugar</strong> — GI 65+ (High)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "honey_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Honey</strong> — GI 58 (Medium-High)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "maple_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Maple Syrup</strong> — GI 54 (Medium)</p>",
+                    "type_preset": "rte"
+                  }
+                },
+                "sap_row": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>⭐ Coconut Flower Sap</strong> — GI 35 (Low) — <em>Lowest Impact</em></p>",
+                    "type_preset": "h6"
+                  }
+                }
+              },
+              "block_order": ["comparison_title", "sugar_row", "honey_row", "maple_row", "sap_row"]
+            }
+          },
+          "block_order": ["explanation", "comparison_group"]
+        }
+      },
+      "block_order": ["header_group", "content_card"],
+      "settings": {
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    }
+  ]
+}
+{% endschema %}
